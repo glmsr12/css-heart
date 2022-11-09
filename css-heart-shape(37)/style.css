@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.heart {
+  background-color: rgb(189, 13, 139);
+  position: relative;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 0 80px rgb(189, 13, 139);
+  transform: rotate(-45deg);
+  animation: pulse 1s linear infinite 0.2s alternate;
+}
+
+.heart::after {
+  background: inherit;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  height: 100px;
+  width: 100px;
+}
+
+.heart::before {
+  background: inherit;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: -50%;
+  height: 100px;
+  width: 100px;
+}
+@keyframes pulse {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  90% {
+    transform: rotate(-45deg) scale(1.6);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1.4);
+  }
+}
